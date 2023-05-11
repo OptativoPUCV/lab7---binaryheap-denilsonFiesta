@@ -99,8 +99,7 @@ void arreglarAbajo(Heap* pq, int i){
 
 void heap_pop(Heap* pq){
   
-  if(!pq.size) return;
-  struct Node data;
+  if(pq.size == 0) return;
 
   *(pq->heapArray) = *(pq->heapArray+pq->size-1);
   pq->size--;
