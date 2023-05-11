@@ -16,6 +16,7 @@ typedef struct Heap{
   int capac;
 } Heap;
 
+//que se hace aca ???
 
 void* heap_top(Heap* pq){
     return NULL;
@@ -34,5 +35,10 @@ void heap_pop(Heap* pq){
 
 Heap* createHeap(){
 
-   return NULL;
+  Heap* new = calloc(1, sizeof(Heap));
+
+  new->size = 0;
+  new->capac = 3;
+  new->heapArray = calloc(3, sizeof(heapElem) );
+  return new;
 }
