@@ -42,3 +42,9 @@ heap.c:23:7: error: ‘qp’ undeclared (first use in this function); did you me
 heap.c:23:7: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 45461f0
+Thu 11 May 2023 04:13:19 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  2|2
+total_score: 20/70
+baad8a8
