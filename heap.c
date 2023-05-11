@@ -31,6 +31,8 @@ void heap_push(Heap* pq, void* data, int priority){
 
 void heap_pop(Heap* pq){
 
+  return (*(pq->heapArray)).data;
+  
 }
 
 Heap* createHeap(){
