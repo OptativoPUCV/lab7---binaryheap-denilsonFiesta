@@ -69,7 +69,7 @@ int hijoI(Heap* pq, int i){
   return soyhijo;
 }
 int hijoD(Heap* pq, int i){
-  int soihijo = 2*i + 1;
+  int soihijo = 2*i + 2;
   if(soihijo >= pq->capac) return -1;
   return soihijo;
 }
@@ -83,7 +83,7 @@ void arreglarAbajo(Heap* pq, int i){
   if( l != -1 && (*(pq->heapArray+l)).priority > (*(pq->heapArray+i)).priority ) max = l;
   else max = i;
 
-  if( r != -1 && (*(pq->heapArray+r)).priority > (*(pq->heapArray+max)).priority) max = r;
+  if( r != -1 && (*(pq->heapArray+r)).priority > (*(pq->heapArray+max)).priority)  max = r;
   
   if(max != i){
     temp = *(pq->heapArray+i);
