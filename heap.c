@@ -27,7 +27,7 @@ void* heap_top(Heap* pq){
 
 int parentN(int i){
   if(!i) return -1;
-  return ((i-1) / 2);
+  return i-1 / 2;
 }
 
 void arreglarArriba(Heap* pq, int i){
