@@ -367,3 +367,14 @@ heap.c:102:8: error: ‘pq’ is a pointer; did you mean to use ‘->’?
       |        ->
 Compilation failed
 a604916
+Thu 11 May 2023 04:56:58 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘arreglarAbajo’:
+heap.c:93:19: error: ‘h’ undeclared (first use in this function)
+   93 |     arreglarAbajo(h, max);
+      |                   ^
+heap.c:93:19: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+2c94760

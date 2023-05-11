@@ -99,7 +99,7 @@ void arreglarAbajo(Heap* pq, int i){
 
 void heap_pop(Heap* pq){
   
-  if(pq.size == 0) return;
+  if(! pq->size) return;
 
   *(pq->heapArray) = *(pq->heapArray+pq->size-1);
   pq->size--;
