@@ -59,7 +59,7 @@ void heap_push(Heap* pq, void* data, int priority){
   (*(pq->heapArray+i)).priority = priority;
   (*(pq->heapArray+i)).data = data;
 
-  arreglarArriba(pq, pq->size);
+  arreglarArriba(pq, i);
   
 }
 
