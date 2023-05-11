@@ -19,9 +19,10 @@ typedef struct Heap{
 //que se hace aca ???
 
 void* heap_top(Heap* pq){
+
+  if(!qp->size) return NULL;
   
-  if(pq->heapArray==NULL) return NULL;
-  else return (*(pq->heapArray)).data;
+  return (*(pq->heapArray)).data;
 }
 
 
