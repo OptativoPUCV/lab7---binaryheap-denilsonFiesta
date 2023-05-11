@@ -65,12 +65,12 @@ void heap_push(Heap* pq, void* data, int priority){
 
 int hijoI(Heap* pq, int i){
   int soyhijo = 2*i + 1;
-  if(soyhijo >= pq->capac) return -1;
+  if(soyhijo >= pq->size) return -1;
   return soyhijo;
 }
 int hijoD(Heap* pq, int i){
   int soihijo = 2*i + 2;
-  if(soihijo >= pq->capac) return -1;
+  if(soihijo >= pq->size) return -1;
   return soihijo;
 }
 
