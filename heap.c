@@ -25,17 +25,43 @@ void* heap_top(Heap* pq){
   return (*(pq->heapArray)).data;
 }
 
+int parentN(int i){
+  if(!i) return -1;
+  return i-1 / 2;
+}
+
+void arreglarArriba(Heap* pq, int i){
+  int parent = parentN(i); 
+  if(parent == -1) return;
+
+  if( (*(pq->heapArray+i)).priority  >  (*(pq->heapArray+parent)).priority ){
+    heapElem temp = (*(pq->heapArray+parent));
+    (*(pq->heapArray+parent)) = (*(pq->heapArray+i));
+    (*(pq->heapArray+i)) = temp;
+    arreglarArriba(pq, parent);
+  }
+  
+}
 
 
 void heap_push(Heap* pq, void* data, int priority){
 
+  if(pq->size == pq->capac){
+    pq->size = pq->size*2 + 1; 
+    pq->heapArray = realloc(pq->heapArray, pq->size );
+  }
+
+  (*(pq->heapArray+pq->size)).priority = priority;
+  (*(pq->heapArray+pq->size)).data = data;
+
+  arreglarArriba(pq, pq->size);
+  pq->size++;
+  
 }
 
 
 void heap_pop(Heap* pq){
 
-  
-  
 }
 
 Heap* createHeap(){
