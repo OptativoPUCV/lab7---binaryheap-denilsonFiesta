@@ -86,9 +86,9 @@ void arreglarAbajo(Heap* pq, int i){
   if( r != -1 && (*(pq->heapArray+r)).priority > (*(pq->heapArray+max)).priority) max = r;
   
   if(max != i){
-    temp = *(pq->array+i);
-    *(pq->array+i) = *(pq->array+max);
-    *(pq->array+max) = temp;
+    temp = *(pq->heapArray+i);
+    *(pq->heapArray+i) = *(pq->heapArray+max);
+    *(pq->heapArray+max) = temp;
 
     arreglarAbajo(h, max);
   }

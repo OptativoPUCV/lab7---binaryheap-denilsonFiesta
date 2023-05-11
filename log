@@ -330,3 +330,24 @@ heap.c:103:15: error: unused variable ‘data’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 86f649c
+Thu 11 May 2023 04:56:30 PM UTC: 
+ heap.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘arreglarAbajo’:
+heap.c:93:19: error: ‘h’ undeclared (first use in this function)
+   93 |     arreglarAbajo(h, max);
+      |                   ^
+heap.c:93:19: note: each undeclared identifier is reported only once for each function it appears in
+heap.c: In function ‘heap_pop’:
+heap.c:102:9: error: ‘pq’ is a pointer; did you mean to use ‘->’?
+  102 |   if(!pq.size) return;
+      |         ^
+      |         ->
+heap.c:103:15: error: storage size of ‘data’ isn’t known
+  103 |   struct Node data;
+      |               ^~~~
+heap.c:103:15: error: unused variable ‘data’ [-Werror=unused-variable]
+cc1: all warnings being treated as errors
+Compilation failed
+c5f034e
