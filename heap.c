@@ -61,12 +61,51 @@ void heap_push(Heap* pq, void* data, int priority){
   (*(pq->heapArray+i)).data = data;
 
   arreglarArriba(pq, i);
+}
+
+int hijoI(heap* pq, int i){
+  int soyhijo = 2*i + 1;
+  if(spyhijo >= pq->capac) return -1;
+  return soyhijo;
+}
+int hijoD(heap* pq, int i){
+  int soihijo = 2*i + 1;
+  if(soihijo >= pq->capac) return -1;
+  return soihijo;
+}
+
+
+void arreglarAbajo(heap* pq, int i){
+  int l, r, max;
+  heapElem temp;
+  l = hijoI(pq, i);
+  r = hijoD(pq, i);
+  if( l != -1 && (*(pq->+l)).priority > (*(h->array+i)).priority ) max = l;
+  else max = i;
+
+  if( r != -1 && (*(h->heapArray+r)).priority > (*(h->heapArray+max)).priority) max = r;
+  
+  if(max != i){
+    temp = *(h->array+i);
+    *(h->array+i) = *(h->array+max);
+    *(h->array+max) = temp;
+
+    PercolateDown(h, max);
+  }
+
   
 }
 
 
 void heap_pop(Heap* pq){
+  
+  if(!pq.size) return;
+  struct Node data;
 
+  *(pq->heapArray) = *(pq->heapArray+pq->size-1);
+  pq->size--;
+  
+  arreglarAbajo(pq, 0);  
 }
 
 Heap* createHeap(){
