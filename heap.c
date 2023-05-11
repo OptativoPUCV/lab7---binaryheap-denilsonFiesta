@@ -63,19 +63,19 @@ void heap_push(Heap* pq, void* data, int priority){
   arreglarArriba(pq, i);
 }
 
-int hijoI(heap* pq, int i){
+int hijoI(Heap* pq, int i){
   int soyhijo = 2*i + 1;
   if(spyhijo >= pq->capac) return -1;
   return soyhijo;
 }
-int hijoD(heap* pq, int i){
+int hijoD(Heap* pq, int i){
   int soihijo = 2*i + 1;
   if(soihijo >= pq->capac) return -1;
   return soihijo;
 }
 
 
-void arreglarAbajo(heap* pq, int i){
+void arreglarAbajo(Heap* pq, int i){
   int l, r, max;
   heapElem temp;
   l = hijoI(pq, i);
