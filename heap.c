@@ -49,7 +49,7 @@ void arreglarArriba(Heap* pq, int i){
 void heap_push(Heap* pq, void* data, int priority){
   
   if(pq->size == pq->capac){
-    printf("%dd , &d ", pq->size, pq->capac);
+    printf("%d , &d ", pq->size, pq->capac);
     pq->capac = pq->capac*2 + 1; 
     pq->heapArray = realloc(pq->heapArray, pq->capac );
   }
