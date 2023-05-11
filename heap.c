@@ -26,7 +26,7 @@ void* heap_top(Heap* pq){
 }
 
 int parentN(Heap* pq, int i){
-  if(i < 0 || i>=pq->capac) return -1;
+  if(i <= 0 || i>=pq->capac) return -1;
   return (i-1)/2;
 }
 
@@ -47,8 +47,9 @@ void arreglarArriba(Heap* pq, int i){
 
 
 void heap_push(Heap* pq, void* data, int priority){
-
+  
   if(pq->size == pq->capac){
+    printf("%dd , &d ", pq->size, pq->capac);
     pq->capac = pq->capac*2 + 1; 
     pq->heapArray = realloc(pq->heapArray, pq->capac );
   }
