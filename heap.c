@@ -90,7 +90,7 @@ void arreglarAbajo(Heap* pq, int i){
     *(pq->heapArray+i) = *(pq->heapArray+max);
     *(pq->heapArray+max) = temp;
 
-    arreglarAbajo(h, max);
+    arreglarAbajo(pq, max);
   }
 
   
