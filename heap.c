@@ -26,7 +26,7 @@ void* heap_top(Heap* pq){
 }
 
 int parentN(Heap* pq, int i){
-  if(i <= 0 || i>=pq->capac) return -1;
+  if(i < 0 || i>=pq->capac) return -1;
   return (i-1)/2;
 }
 
