@@ -25,14 +25,14 @@ void* heap_top(Heap* pq){
   return (*(pq->heapArray)).data;
 }
 
-int parentN(int i){
-  if(!i) return -1;
-  return (i-1 / 2);
+int parentN(Heap* pq, int i){
+  if(i <= 0 || i>=pq->capac) return -1;
+  return (i-1)/2;
 }
 
 void arreglarArriba(Heap* pq, int i){
   
-  int parent = parentN(i); 
+  int parent = parentN(pq, i); 
   
   if(parent == -1) return;
 
