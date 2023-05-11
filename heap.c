@@ -34,7 +34,7 @@ void arreglarArriba(Heap* pq, int i){
   int parent = parentN(i); 
   if(parent == -1) return;
 
-  if( (*(pq->heapArray+i)).priority  >  (*(pq->heapArray+parent)).priority ){
+  if( (*(pq->heapArray+i)).priority  <  (*(pq->heapArray+parent)).priority ){
     heapElem temp = (*(pq->heapArray+parent));
     (*(pq->heapArray+parent)) = (*(pq->heapArray+i));
     (*(pq->heapArray+i)) = temp;
