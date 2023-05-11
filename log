@@ -225,3 +225,30 @@ heap.c:103:15: error: unused variable ‘data’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 3227951
+Thu 11 May 2023 04:55:04 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘arreglarAbajo’:
+heap.c:83:25: error: expected identifier before ‘+’ token
+   83 |   if( l != -1 && (*(pq->+l)).priority > (*(h->array+i)).priority ) max = l;
+      |                         ^
+heap.c:83:44: error: ‘h’ undeclared (first use in this function)
+   83 |   if( l != -1 && (*(pq->+l)).priority > (*(h->array+i)).priority ) max = l;
+      |                                            ^
+heap.c:83:44: note: each undeclared identifier is reported only once for each function it appears in
+heap.c:93:5: error: implicit declaration of function ‘PercolateDown’ [-Werror=implicit-function-declaration]
+   93 |     PercolateDown(h, max);
+      |     ^~~~~~~~~~~~~
+heap.c: In function ‘heap_pop’:
+heap.c:102:9: error: ‘pq’ is a pointer; did you mean to use ‘->’?
+  102 |   if(!pq.size) return;
+      |         ^
+      |         ->
+heap.c:103:15: error: storage size of ‘data’ isn’t known
+  103 |   struct Node data;
+      |               ^~~~
+heap.c:103:15: error: unused variable ‘data’ [-Werror=unused-variable]
+cc1: all warnings being treated as errors
+Compilation failed
+3f27b53
