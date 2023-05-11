@@ -90,7 +90,7 @@ void arreglarAbajo(Heap* pq, int i){
     *(h->array+i) = *(h->array+max);
     *(h->array+max) = temp;
 
-    PercolateDown(h, max);
+    arreglarAbajo(h, max);
   }
 
   
