@@ -80,10 +80,10 @@ void arreglarAbajo(Heap* pq, int i){
   heapElem temp;
   l = hijoI(pq, i);
   r = hijoD(pq, i);
-  if( l != -1 && (*(pq->+l)).priority > (*(h->array+i)).priority ) max = l;
+  if( l != -1 && (*(pq->heapArray+l)).priority > (*(pq->heapArray+i)).priority ) max = l;
   else max = i;
 
-  if( r != -1 && (*(h->heapArray+r)).priority > (*(h->heapArray+max)).priority) max = r;
+  if( r != -1 && (*(pq->heapArray+r)).priority > (*(pq->heapArray+max)).priority) max = r;
   
   if(max != i){
     temp = *(h->array+i);
